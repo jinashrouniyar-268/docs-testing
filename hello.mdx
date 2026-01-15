@@ -1,0 +1,31 @@
+---
+title: "Auto & Manual Syncing"
+description: "Detailed instructions on how to set up Auto & Manual Syncing"
+---
+
+## Overview
+
+You can enable or disable **auto-syncing** at the top of your Datastore. When enabled, data changes are synced every 3 hours and permission updates every hour.
+
+<Note>
+**Note:** Box connectors automatically sync every 24 hours due to rate limits in the Box API. Please contact [connectors@contextual.ai](mailto:connectors@contextual.ai) if you need faster syncing.
+</Note>
+
+Please note that changes may not appear immediately. Contextual AI relies on the upstream data source’s API (for example, SharePoint), and updates are only pulled once the API confirms that changes have been made.
+![Screenshot 2025-09-08 at 7.01.51 PM.png](/images/Screenshot2025-09-08at7.01.51PM.png)
+
+You can also trigger a **manual sync** to pull in changes.
+
+![Screenshot 2025-09-08 at 7.01.55 PM.png](/images/Screenshot2025-09-08at7.01.55PM.png)
+
+Possible sync status indicators include:
+
+- **Syncing metadata:** We are syncing file metadata, users, and groups. We will need to sync metadata before we can begin ingestion.
+- **Processing:** We are ingesting any document or metadata changes.
+- **Synced / Green checkmark:** The sync has completed successfully.
+- **Partially Synced:** Some documents failed in the sync. To correct this issue, wait for 10-15 minutes and retrigger a manual sync. The failed documents will be retried.
+- **Failed:** All documents failed in the sync. Make sure that you have sufficient credits and retry with a manual sync after waiting for 10-15 minutes.
+
+<Note>
+If your sync still fails, please contact [connectors@contextual.ai](mailto:connectors@contextual.ai) for further assistance. 
+</Note>
